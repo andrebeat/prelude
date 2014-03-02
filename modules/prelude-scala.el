@@ -33,7 +33,7 @@
 ;;; Code:
 
 (require 'prelude-programming)
-(prelude-require-packages '(scala-mode2))
+(prelude-require-packages '(scala-mode2 ensime))
 
 (defun prelude-scala-mode-defaults ()
   (subword-mode +1))
@@ -42,6 +42,15 @@
 
 (add-hook 'scala-mode-hook (lambda ()
                              (run-hooks 'prelude-scala-mode-hook)))
+
+;; Ensime
+(require 'ensime)
+
+;; This step causes the ensime-mode to be started whenever
+;; scala-mode is started for a buffer. You may have to customize this step
+;; if you're not using the standard scala mode.
+(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
+
 (provide 'prelude-scala)
 
 ;;; prelude-scala.el ends here
