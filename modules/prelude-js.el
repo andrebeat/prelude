@@ -34,15 +34,14 @@
 
 (require 'prelude-programming)
 
-(eval-after-load 'js-mode
-  '(progn
-     (defun prelude-js-mode-defaults ()
-       ;; electric-layout-mode doesn't play nice with js-mode
-       (electric-layout-mode -1))
+(prelude-require-packages '(js3-mode))
 
-     (setq prelude-js-mode-hook 'prelude-js-mode-defaults)
+(autoload 'js3-mode "js3-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.js$" . js3-mode))
+(add-hook 'js3-mode-hook (lambda () (run-hooks 'prelude-prog-mode-hook)))
 
-     (add-hook 'js-mode-hook (lambda () (run-hooks 'prelude-js-mode-hook)))))
+(custom-set-variables
+ '(js3-consistent-level-indent-inner-bracket t))
 
 (provide 'prelude-js)
 
