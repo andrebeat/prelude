@@ -12,6 +12,22 @@ Prelude is compatible **ONLY with GNU Emacs 24.x**. In general you're
 advised to always run Prelude with the latest Emacs - currently
 **24.3**.
 
+## Personal Fork
+
+This is my own personal fork of Emacs Prelude that I use daily. I run Emacs on OSX using the [emacs-mac-port](https://github.com/railwaycat/emacs-mac-port) distribution from railwaycat.
+Below is a list of changes from mainstream:
+
+- Personal utility functions and keybindings
+- Disabled scrollbar
+- Default font set to Inconsolata
+- "Old-style" fullscreen on OSX
+- Server mode
+- Multiple cursors
+- JSON module
+- rvm module
+- JS module uses js3-mode instead
+- Scala module uses ensime
+
 **Table of Contents**
 
 - [Fast Forward](#fast-forward)
