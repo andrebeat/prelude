@@ -27,6 +27,7 @@ Below is a list of changes from mainstream:
 - rvm module
 - JS module uses js3-mode instead
 - Scala module uses ensime
+- Org-mode goodness
 
 **Table of Contents**
 
