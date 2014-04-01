@@ -7,3 +7,6 @@
 
 ;; fallback font for unicode characters
 (set-fontset-font "fontset-default" 'unicode "Menlo-13")
+
+(require 'nyan-mode)
+;; (nyan-mode)
