@@ -8,3 +8,6 @@
 
 (global-set-key (kbd "M-2") 'personal-insert-at-sign)
 (global-set-key (kbd "M-3") 'personal-insert-euro-sign)
+
+(global-set-key [?\s-a] 'projectile-ack)
+(global-set-key [?\s-g] 'goto-line)
