@@ -28,6 +28,7 @@ Below is a list of changes from mainstream:
 - JS module uses js3-mode instead
 - Scala module uses ensime
 - Org-mode goodness
+- Org-babel
 
 **Table of Contents**
 
