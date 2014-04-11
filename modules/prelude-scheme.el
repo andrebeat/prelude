@@ -36,6 +36,8 @@
 
 (add-hook 'scheme-mode-hook (lambda () (run-hooks 'prelude-lisp-coding-hook)))
 
+(setq scheme-program-name "guile")
+
 (provide 'prelude-scheme)
 
 ;;; prelude-scheme.el ends here
