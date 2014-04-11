@@ -33,6 +33,7 @@
 ;;; Code:
 
 (require 'prelude-lisp)
+(prelude-require-packages '(geiser))
 
 (add-hook 'scheme-mode-hook (lambda () (run-hooks 'prelude-lisp-coding-hook)))
 
