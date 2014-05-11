@@ -171,6 +171,8 @@
          (plantuml . t)
          (latex . t))))
 
+(setq org-src-fontify-natively t)
+
 ;; Do not prompt to confirm evaluation
 ;; This may be dangerous - make sure you understand the consequences
 ;; of setting this -- see the docstring for details
