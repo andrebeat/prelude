@@ -31,6 +31,7 @@ Below is a list of changes from mainstream:
 - Scala module uses ensime
 - Org-mode goodness
 - Org-babel
+- Desktop mode
 
 **Table of Contents**
 
