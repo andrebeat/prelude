@@ -1,3 +1,4 @@
+[![License GPL 3][badge-license]](http://www.gnu.org/licenses/gpl-3.0.txt)
 [![Gittip](http://img.shields.io/gittip/bbatsov.svg)](https://www.gittip.com/bbatsov/)
 
 Emacs Prelude
@@ -203,7 +204,6 @@ By default most of the modules that ship with Prelude are not loaded. For more i
 (require 'prelude-js)
 ;; (require 'prelude-latex)
 (require 'prelude-lisp)
-;; (require 'prelude-markdown)
 ;; (require 'prelude-mediawiki)
 (require 'prelude-org)
 (require 'prelude-perl)
@@ -646,3 +646,5 @@ welcome. GitHub pull requests are even better! :-)
 
 Cheers,<br/>
 [Bozhidar](https://twitter.com/bbatsov)
+
+[badge-license]: https://img.shields.io/badge/license-GPL_3-green.svg
