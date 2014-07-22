@@ -32,7 +32,7 @@
 
 ;;; Code:
 
-(prelude-require-packages '(org-pomodoro))
+(prelude-require-packages '(org-pomodoro es-mode))
 
 (add-to-list 'auto-mode-alist '("\\.org\\’" . org-mode))
 (global-set-key "\C-cl" 'org-store-link)
@@ -168,6 +168,7 @@
          (sh . t)
          (ledger . t)
          (org . t)
+         (elasticsearch . t)
          (plantuml . t)
          (latex . t))))
 
