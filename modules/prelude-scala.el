@@ -33,7 +33,7 @@
 ;;; Code:
 
 (require 'prelude-programming)
-(prelude-require-packages '(scala-mode2 ensime))
+(prelude-require-packages '(scala-mode2))
 
 (defun prelude-scala-mode-defaults ()
   (subword-mode +1))
@@ -44,6 +44,7 @@
                              (run-hooks 'prelude-scala-mode-hook)))
 
 ;; Ensime
+(add-to-list 'load-path "/Users/beat/Workbench/ensime/ensime-emacs/")
 (require 'ensime)
 
 ;; This step causes the ensime-mode to be started whenever
