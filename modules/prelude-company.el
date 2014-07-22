@@ -31,7 +31,7 @@
 ;; Boston, MA 02110-1301, USA.
 
 ;;; Code:
-(prelude-require-packages '(company))
+(prelude-require-packages '(company company-cider))
 
 (require 'company)
 
@@ -43,6 +43,8 @@
 (setq company-tooltip-flip-when-above t)
 
 (global-company-mode 1)
+
+(eval-after-load 'company '(add-to-list 'company-backends 'company-cider))
 
 (provide 'prelude-company)
 ;;; prelude-company.el ends here
