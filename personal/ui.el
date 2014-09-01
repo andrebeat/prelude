@@ -1,4 +1,4 @@
-(prelude-require-packages '(auto-dim-other-buffers))
+(prelude-require-packages '(auto-dim-other-buffers color-identifiers-mode))
 
 ;; disable scrollbar
 (scroll-bar-mode -1)
@@ -25,3 +25,5 @@
 (auto-dim-other-buffers-mode)
 (custom-set-faces
  '(auto-dim-other-buffers-face ((t (:background "#363636")))))
+
+(add-hook 'after-init-hook 'global-color-identifiers-mode)
