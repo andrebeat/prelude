@@ -34,7 +34,9 @@
 
 (prelude-require-packages '(org-pomodoro es-mode))
 
-(add-to-list 'auto-mode-alist '("\\.org\\’" . org-mode))
+(add-to-list 'auto-mode-alist '("\\.\\(org\\|org_archive\\|txt\\)$" . org-mode))
+(require 'org)
+
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-ca" 'org-agenda)
@@ -62,8 +64,14 @@
 (global-set-key (kbd "<f9>") 'org-pomodoro)
 
 ;; Org directory and agenda files
-(setq org-directory "~/Dropbox/org")
-(setq org-agenda-files (list "~/Dropbox/org"))
+(setq org-directory "~/org")
+(setq org-agenda-files (quote ("~/org/todo.org"
+                               "~/org/projects")))
+(setq org-default-notes-file "~/org/refile.org")
+
+;; MobileOrg
+(setq org-mobile-inbox-for-pull "~/org/from-mobile.org")
+(setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
 
 ;; Org keywords and faces
 (setq org-todo-keywords
@@ -96,6 +104,7 @@
 
 ;; Use fast todo selection
 (setq org-use-fast-todo-selection t)
+(setq org-treat-S-cursor-todo-selection-as-state-change nil)
 
 ;; Resume clocking task when emacs is restarted
 (org-clock-persistence-insinuate)
@@ -144,6 +153,26 @@
 (setq org-cycle-separator-lines 0)
 (setq org-blank-before-new-entry (quote ((heading)
                                          (plain-list-item . auto))))
+
+;; Templates
+(setq org-capture-templates
+      (quote (("t" "Todo" entry (file+headline "~/org/refile.org" "Tasks")
+               "* TODO %?")
+              ("i" "Todo+Iteration" entry (file+headline "~/org/refile.org" "Tasks")
+               "* TODO %? %^{Iteration}p"))))
+
+;; Refile config
+; Targets include this file and any file contributing to the agenda - up to 9 levels deep
+(setq org-refile-targets (quote ((nil :maxlevel . 9)
+                                 (org-agenda-files :maxlevel . 9))))
+; Use full outline paths for refile targets - we file directly with IDO
+(setq org-refile-use-outline-path t)
+; Targets complete directly with IDO
+(setq org-outline-path-complete-in-steps nil)
+; Allow refile to create parent tasks with confirmation
+(setq org-refile-allow-creating-parent-nodes (quote confirm))
+; Use IDO for both buffer and file completion and ido-everywhere to t
+(setq org-completion-use-ido t)
 
 ;; Babel
 (setq org-plantuml-jar-path "~/.bin/plantuml.jar")
