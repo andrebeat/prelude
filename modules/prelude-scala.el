@@ -52,6 +52,9 @@
 ;; if you're not using the standard scala mode.
 (add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
 
+(custom-set-variables
+ '(ensime-sem-high-enabled-p nil))
+
 (provide 'prelude-scala)
 
 ;;; prelude-scala.el ends here
