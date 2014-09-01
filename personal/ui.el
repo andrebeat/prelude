@@ -1,3 +1,5 @@
+(prelude-require-packages '(auto-dim-other-buffers))
+
 ;; disable scrollbar
 (scroll-bar-mode -1)
 
@@ -19,3 +21,7 @@
 
 (require 'nyan-mode)
 ;; (nyan-mode)
+
+(auto-dim-other-buffers-mode)
+(custom-set-faces
+ '(auto-dim-other-buffers-face ((t (:background "#363636")))))
