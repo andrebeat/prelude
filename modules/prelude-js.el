@@ -33,15 +33,25 @@
 ;;; Code:
 
 (require 'prelude-programming)
+(prelude-require-packages '(js2-mode json-mode))
 
-(prelude-require-packages '(js3-mode))
+(require 'js2-mode)
 
-(autoload 'js3-mode "js3-mode" nil t)
-(add-to-list 'auto-mode-alist '("\\.js$" . js3-mode))
-(add-hook 'js3-mode-hook (lambda () (run-hooks 'prelude-prog-mode-hook)))
+(add-to-list 'auto-mode-alist '("\\.js\\'"    . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.pac\\'"   . js2-mode))
+(add-to-list 'interpreter-mode-alist '("node" . js2-mode))
 
-(custom-set-variables
- '(js3-consistent-level-indent-inner-bracket t))
+(eval-after-load 'js2-mode
+  '(progn
+     (defun prelude-js-mode-defaults ()
+       ;; electric-layout-mode doesn't play nice with smartparens
+       (setq-local electric-layout-rules '((?\; . after)))
+       (setq mode-name "JS2")
+       (js2-imenu-extras-mode +1))
+
+     (setq prelude-js-mode-hook 'prelude-js-mode-defaults)
+
+     (add-hook 'js2-mode-hook (lambda () (run-hooks 'prelude-js-mode-hook)))))
 
 (provide 'prelude-js)
 
