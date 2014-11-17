@@ -17,22 +17,29 @@ advised to always run Prelude with the latest Emacs - currently
 
 ## Personal Fork
 
-This is my own personal fork of Emacs Prelude that I use daily. I run Emacs on OSX using the [emacs-mac-port](https://github.com/railwaycat/emacs-mac-port) distribution from railwaycat.
-Below is a list of changes from mainstream:
+This is my own personal fork of Emacs Prelude that I use daily with Emacs 24.4 on OSX.
+I run vanilla Emacs installed from Homebrew
+(`brew install emacs --cocoa --with-gnutls --with-librsvg --with-imagemagick`).
+This is what it looks like:
 
-- Personal utility functions and keybindings
-- Disabled scrollbar
-- Default font set to Inconsolata
-- "Old-style" fullscreen on OSX
+![screenshot](sample/screenshot.png)
+
+Below is a list of changes from upstream:
+
+- UI
+  - Disabled scrollbar
+  - Default font set to Inconsolata
+  - Auto-dim other buffers
+  - Color identifiers mode
+  - Multiple cursors
+  - "Old-style" fullscreen on OSX
 - Server mode
-- Multiple cursors
-- JSON module
+- Desktop mode
+- Personal utility functions and keybindings
 - rvm module
-- JS module uses js3-mode instead
-- Scala module uses ensime
+- Scala module with ensime
 - Org-mode goodness
 - Org-babel
-- Desktop mode
 
 **Table of Contents**
 
