@@ -1,4 +1,4 @@
-(prelude-require-packages '(auto-dim-other-buffers color-identifiers-mode))
+(prelude-require-packages '(auto-dim-other-buffers color-identifiers-mode multiple-cursors))
 
 ;; disable scrollbar
 (scroll-bar-mode -1)
