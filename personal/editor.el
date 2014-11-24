@@ -1,1 +1,1 @@
-(setq whitespace-line-column 100) ;; limit line length
+(setq whitespace-line-column 120) ;; limit line length
