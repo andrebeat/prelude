@@ -10,5 +10,5 @@
 (global-set-key (kbd "M-3") 'personal-insert-euro-sign)
 
 (global-set-key (kbd "<escape>") 'god-local-mode)
-(global-set-key (kbd "s-a") 'projectile-ack)
+(global-set-key (kbd "s-a") 'helm-projectile-ag)
 (global-set-key (kbd "s-f") 'projectile-find-file)
