@@ -29,6 +29,7 @@
 (require 'prelude-perl)
 (require 'prelude-python)
 (require 'prelude-ruby)
+(require 'prelude-rust)
 (require 'prelude-rvm)
 (require 'prelude-scala)
 (require 'prelude-scheme)
