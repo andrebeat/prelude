@@ -35,12 +35,6 @@
 
 (prelude-require-packages '(helm helm-projectile))
 
-(require 'helm-config)
-(require 'helm-projectile)
-
-(when (executable-find "curl")
-  (setq helm-google-suggest-use-curl-p t))
-
 ;; See https://github.com/bbatsov/prelude/pull/670 for a detailed
 ;; discussion of these options.
 (setq helm-split-window-in-side-p           t
@@ -48,6 +42,19 @@
       helm-move-to-line-cycle-in-source     t
       helm-ff-search-library-in-sexp        t
       helm-ff-file-name-history-use-recentf t)
+
+(setq helm-recentf-fuzzy-match    t
+      helm-projectile-fuzzy-match t
+      helm-locate-fuzzy-match     t
+      helm-M-x-fuzzy-match        t
+      helm-imenu-fuzzy-match      t
+      helm-apropos-fuzzy-match    t)
+
+(when (executable-find "curl")
+  (setq helm-google-suggest-use-curl-p t))
+
+(require 'helm-config)
+(require 'helm-projectile)
 
 ;; The default "C-x c" is quite close to "C-x C-c", which quits Emacs.
 ;; Changed to "C-c h". Note: We must set "C-c h" globally, because we
