@@ -1,5 +1,5 @@
 (require 'prelude-programming)
-(prelude-require-packages '(rust-mode))
+(prelude-require-packages '(rust-mode toml-mode))
 
 (setq racer-rust-src-path "/Users/beat/Workbench/rust/src")
 (setq racer-cmd "/Users/beat/Workbench/racer/target/release/racer")
