@@ -19,9 +19,6 @@
 (setq desktop-dirname prelude-savefile-dir)
 (desktop-save-mode +1)
 
-(require 'nyan-mode)
-;; (nyan-mode)
-
 (auto-dim-other-buffers-mode)
 (custom-set-faces
  '(auto-dim-other-buffers-face ((t (:background "#363636")))))
