@@ -65,11 +65,20 @@
   (sp-local-tag "=" "<%= " " %>")
   (sp-local-tag "#" "<%# " " %>"))
 
+
+(add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
+;; (add-to-list 'web-mode-comment-formats '("jsx" . "{/*"))
+(defadvice web-mode-highlight-part (around tweak-jsx activate)
+  (if (equal web-mode-content-type "jsx")
+      (let ((web-mode-enable-part-face nil))
+        ad-do-it)
+    ad-do-it))
+
 (eval-after-load 'web-mode
   '(progn
      (defun prelude-web-mode-defaults ())
      (setq prelude-web-mode-hook 'prelude-web-mode-defaults)
-
+     (setq web-mode-markup-indent-offset 2)
      (add-hook 'web-mode-hook (lambda ()
                                 (run-hooks 'prelude-web-mode-hook)))))
 
