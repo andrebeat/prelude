@@ -1,4 +1,4 @@
-(prelude-require-packages '(auto-dim-other-buffers multiple-cursors smart-mode-line))
+(prelude-require-packages '(auto-dim-other-buffers multiple-cursors smart-mode-line swiper swiper-helm))
 
 ;; disable scrollbar
 (scroll-bar-mode -1)
@@ -25,3 +25,8 @@
 
 (sml/setup)
 (sml/apply-theme 'automatic)
+
+;; swiper
+;; recenter after search
+(defadvice swiper--action (after recenter activate)
+  (recenter))
