@@ -1,4 +1,4 @@
-(prelude-require-packages '(auto-dim-other-buffers color-identifiers-mode multiple-cursors smart-mode-line))
+(prelude-require-packages '(auto-dim-other-buffers multiple-cursors smart-mode-line))
 
 ;; disable scrollbar
 (scroll-bar-mode -1)
@@ -22,8 +22,6 @@
 (auto-dim-other-buffers-mode)
 (custom-set-faces
  '(auto-dim-other-buffers-face ((t (:background "#363636")))))
-
-(add-hook 'after-init-hook 'global-color-identifiers-mode)
 
 (sml/setup)
 (sml/apply-theme 'automatic)
