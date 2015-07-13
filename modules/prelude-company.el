@@ -42,6 +42,8 @@
 ;; is displayed on top (happens near the bottom of windows)
 (setq company-tooltip-flip-when-above t)
 
+(setq company-selection-wrap-around t)
+
 (global-company-mode 1)
 
 (provide 'prelude-company)
