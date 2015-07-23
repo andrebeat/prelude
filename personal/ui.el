@@ -1,4 +1,4 @@
-(prelude-require-packages '(auto-dim-other-buffers multiple-cursors smart-mode-line swiper swiper-helm))
+(prelude-require-packages '(auto-dim-other-buffers multiple-cursors swiper swiper-helm))
 
 ;; disable scrollbar
 (scroll-bar-mode -1)
@@ -22,9 +22,6 @@
 (auto-dim-other-buffers-mode)
 (custom-set-faces
  '(auto-dim-other-buffers-face ((t (:background "#363636")))))
-
-(sml/setup)
-(sml/apply-theme 'automatic)
 
 ;; swiper
 ;; recenter after search
