@@ -23,6 +23,18 @@
 (custom-set-faces
  '(auto-dim-other-buffers-face ((t (:background "#363636")))))
 
+(setq rm-blacklist
+      '(" ,"
+        " company"
+        " Dim"
+        " Fly"
+        " guru"
+        " Helm"
+        " Pre"
+        " SP"
+        " ws"
+        " yas"))
+
 ;; swiper
 ;; recenter after search
 (defadvice swiper--action (after recenter activate)
