@@ -63,6 +63,16 @@
 (global-set-key (kbd "<f8>") 'org-clock-in)
 (global-set-key (kbd "<f9>") 'org-pomodoro)
 
+;; Org Pomodoro
+;; reduce volume of the bell sounds
+(custom-set-variables
+ '(org-pomodoro-start-sound-args "-v 0.3")
+ '(org-pomodoro-finished-sound-args "-v 0.3")
+ '(org-pomodoro-killed-sound-args "-v 0.3")
+ '(org-pomodoro-short-break-sound-args "-v 0.3")
+ '(org-pomodoro-long-break-sound-args "-v 0.3")
+ '(org-pomodoro-ticking-sound-args "-v 0.3"))
+
 ;; Org directory and agenda files
 (setq org-directory "~/org")
 (setq org-agenda-files (quote ("~/org/todo.org"
