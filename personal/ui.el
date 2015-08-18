@@ -23,6 +23,11 @@
 (custom-set-faces
  '(auto-dim-other-buffers-face ((t (:background "#363636")))))
 
+(add-to-list 'sml/replacer-regexp-list '("^~/Workbench/" ":WB:") t)
+(add-to-list 'sml/replacer-regexp-list `(,(concat "^" (file-truename "~/org/")) ":Org:") t)
+(add-to-list 'sml/replacer-regexp-list `(,(concat "^" (file-truename "~/Dropbox/")) ":DB:") t)
+(add-to-list 'sml/replacer-regexp-list '("^~/.homesick/repos/dotfiles/home/.emacs.d/" ":ED:") t)
+
 (setq rm-blacklist
       '(" ,"
         " company"
