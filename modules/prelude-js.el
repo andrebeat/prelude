@@ -54,6 +54,15 @@
 
      (add-hook 'js2-mode-hook (lambda () (run-hooks 'prelude-js-mode-hook)))))
 
+(eval-after-load 'json-mode
+  '(progn
+     (defun prelude-json-mode-defaults ()
+       (setq js-indent-level 2))
+
+     (setq prelude-json-mode-hook 'prelude-json-mode-defaults)
+
+     (add-hook 'json-mode-hook (lambda () (run-hooks 'prelude-json-mode-hook)))))
+
 (provide 'prelude-js)
 
 ;;; prelude-js.el ends here
