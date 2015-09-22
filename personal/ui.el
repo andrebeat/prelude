@@ -30,11 +30,13 @@
 
 (setq rm-blacklist
       '(" ,"
+        " Abbrev"
         " company"
         " Dim"
         " Fly"
         " guru"
         " Helm"
+        " Ind"
         " Pre"
         " SP"
         " ws"
