@@ -1,7 +1,8 @@
 (prelude-require-packages '(auto-dim-other-buffers multiple-cursors swiper swiper-helm))
 
 ;; disable scrollbar
-(scroll-bar-mode -1)
+(when (fboundp 'scroll-bar-mode)
+  (scroll-bar-mode -1))
 
 ;; set default font
 (add-to-list 'default-frame-alist
