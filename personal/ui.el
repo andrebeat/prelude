@@ -9,7 +9,8 @@
              '(font . "Inconsolata-14"))
 
 ;; fallback font for unicode characters
-(set-fontset-font "fontset-default" 'unicode "Menlo-13")
+(when (fboundp 'set-fontset-font)
+  (set-fontset-font "fontset-default" 'unicode "Menlo-13"))
 
 ;; enable desktop-mode
 (require 'desktop)
