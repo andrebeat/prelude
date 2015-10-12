@@ -36,16 +36,21 @@ Below is a list of changes from upstream:
   - Disabled scrollbar
   - Default font set to Inconsolata
   - Auto-dim other buffers
-  - Color identifiers mode
   - Multiple cursors
   - "Old-style" fullscreen on OSX
+  - Smart Mode Line
+  - Helm
+  - Swiper
 - Server mode
 - Desktop mode
 - Personal utility functions and keybindings
-- rvm module
-- Scala module with ensime
-- Org-mode goodness
-- Org-babel
+- Modules
+  - rvm
+  - Scala (with Ensime)
+  - Rust (with Racer)
+  - Org-mode
+    - Simple workflow
+    - Org-babel
 
 **Table of Contents**
 
