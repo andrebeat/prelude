@@ -48,3 +48,18 @@
 ;; recenter after search
 (defadvice swiper--action (after recenter activate)
   (recenter))
+
+;; fullscreen
+(defun personal-toggle-fullscreen ()
+  (interactive)
+  (cond
+   ((eq system-type 'darwin)
+    (set-frame-parameter
+     nil 'fullscreen
+     (when (not (frame-parameter nil 'fullscreen)) 'fullboth)))
+   ((eq window-system 'x)
+    (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
+                           '(2 "_NET_WM_STATE_FULLSCREEN" 0)))
+   (error "Unable to toggle fullscreen")))
+
+(global-set-key (kbd "<f5>") 'personal-toggle-fullscreen)
