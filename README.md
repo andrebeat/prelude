@@ -21,9 +21,9 @@ advised to always run Prelude with the latest Emacs - currently
 
 This is my own personal fork of Emacs Prelude that I use daily with Emacs 24.5.1 on Mac OS X. I use
 the Emacs mac port
-[[http://www.math.s.chiba-u.ac.jp/~mituharu/emacs-mac.git/][from Yamamoto Mitsuharu]], which I
-usually install and update using [[http://brew.sh/][Homebrew]] and
-[[https://github.com/railwaycat/homebrew-emacsmacport][this formula]] (`brew install emacs-mac
+[from Yamamoto Mitsuharu](http://www.math.s.chiba-u.ac.jp/~mituharu/emacs-mac.git/), which I
+usually install and update using [Homebrew](http://brew.sh/) and
+[this formula](https://github.com/railwaycat/homebrew-emacsmacport) (`brew install emacs-mac
 --with-glib --with-gnutls --with-imagemagick --with-official-icon --with-xml2`).
 
 This is what it looks like:
