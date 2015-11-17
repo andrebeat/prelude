@@ -11,6 +11,8 @@
 
 (global-set-key (kbd "<escape>") 'god-local-mode)
 (global-set-key (kbd "s-a") 'helm-projectile-ag)
-(global-set-key (kbd "s-f") 'projectile-find-file)
+(global-set-key (kbd "s-f") 'helm-projectile-find-file)
+
+(global-set-key (kbd "s-l") 'goto-line)
 
 (global-set-key (kbd "C-s") 'swiper-helm)
