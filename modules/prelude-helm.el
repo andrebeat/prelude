@@ -33,7 +33,7 @@
 
 ;;; Code:
 
-(prelude-require-packages '(helm helm-projectile))
+(prelude-require-packages '(helm helm-projectile helm-flx))
 
 ;; See https://github.com/bbatsov/prelude/pull/670 for a detailed
 ;; discussion of these options.
@@ -49,6 +49,8 @@
       helm-M-x-fuzzy-match        t
       helm-imenu-fuzzy-match      t
       helm-apropos-fuzzy-match    t)
+
+(helm-flx-mode +1)
 
 (when (executable-find "curl")
   (setq helm-google-suggest-use-curl-p t))
