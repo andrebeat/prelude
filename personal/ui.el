@@ -63,3 +63,6 @@
    (error "Unable to toggle fullscreen")))
 
 (global-set-key (kbd "<f5>") 'personal-toggle-fullscreen)
+
+;; disable beacon mode
+(beacon-mode -1)
