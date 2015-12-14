@@ -1,3 +1,7 @@
+**DEPRECATED: I no longer use this config. Please check [emacs.d](https://github.com/andrebeat/emacs.d).**
+
+* * *
+
 [![License GPL 3][badge-license]](http://www.gnu.org/licenses/gpl-3.0.txt)
 [![Gratipay](http://img.shields.io/gratipay/bbatsov.svg)](https://gratipay.com/bbatsov/)
 
